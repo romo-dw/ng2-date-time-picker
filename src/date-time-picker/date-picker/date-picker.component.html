@@ -2,8 +2,8 @@
     <div class="picker-wrap">
         <div class="picker-box">
             <div class="picker-header">
-                <div class="picker-header-nav">
-                    <span class="nav-prev" (click)="prevMonth()"></span>
+                <div class="picker-header-nav" (click)="prevMonth()">
+                    <span class="nav-prev"></span>
                 </div>
                 <div class="picker-header-content">
                     <div class="content">
@@ -11,8 +11,8 @@
                         <span class="year">{{calendarDate | moment: "YYYY"}}</span>
                     </div>
                 </div>
-                <div class="picker-header-nav">
-                    <span class="nav-next" (click)="nextMonth()"></span>
+                <div class="picker-header-nav" (click)="nextMonth()">
+                    <span class="nav-next"></span>
                 </div>
             </div>
             <div class="picker-calendar">
@@ -31,11 +31,6 @@
                     {{ day | moment: 'D'}}
                 </span>
                 </div>
-            </div>
-            <div class="picker-footer">
-                <div class="picker-action action-today" (click)="selectToday()"><span class="text">Today</span></div>
-                <div class="picker-action action-clear" (click)="clearPickDate()"><span class="text">Clear</span></div>
-                <div class="picker-action action-close" (click)="cancelDatePicker()"><span class="text">Close</span></div>
             </div>
         </div>
     </div>

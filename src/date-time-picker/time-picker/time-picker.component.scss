@@ -11,7 +11,7 @@
 .picker-wrap {
   width: 95vw;
   max-width: 40rem;
-  font-family: 'Proxima Nova';
+  color: #161616;
 }
 
 .picker-box {
@@ -68,14 +68,15 @@
   display: inline-block;
   padding: .25rem;
   cursor: pointer;
+  padding: 4px;
 
   &.up {
-    top: -1rem;
+    top: -2rem;
     transform: translateX(-50%) rotate(-135deg);
   }
 
   &.down {
-    bottom: -1rem;
+    bottom: -2rem;
     transform: translateX(-50%) rotate(45deg);
   }
 

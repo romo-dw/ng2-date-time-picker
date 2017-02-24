@@ -14,7 +14,6 @@
 }
 
 .picker-box {
-  font-family: 'Proxima Nova';
   width: 100%;
   padding: $base-line-height / 2 1rem;
   user-select: none;
@@ -27,6 +26,7 @@
   display: flex;
   height: $base-line-height * 2;
   width: 100%;
+  margin-bottom: 15px;
 }
 
 .picker-header-nav {
@@ -67,7 +67,7 @@
 
   .month {
     @include type-setting(2);
-
+    color: #161616;
     margin-right: .5rem;
     font-weight: 700;
   }
@@ -93,10 +93,12 @@
     text-align: left;
     color: #999;
     width: calc(100% / 7);
+    padding-left: 30px;
   }
 
   .picker-day {
     @include type-setting(1);
+    color: #161616;
     position: relative;
     height: $base-line-height * 2;
     text-align: center;
@@ -104,7 +106,8 @@
     width: calc(100% / 7);
 
     &:hover {
-      background: #b1dcfb
+      background: rgba(231, 39, 0, 0.5);
+      color: #fff;
     }
   }
 
@@ -112,16 +115,16 @@
     color: #ddd;
 
     &:hover {
-      color: #000;
+      color: #fff;
     }
   }
 
   .selected {
-    background: #0089ec;
+    background: #e72700;
     color: #fff;
 
     &:hover {
-      background: #0089ec;
+      background: #e72700;
     }
   }
 
@@ -132,7 +135,7 @@
     right: 2px;
     width: 0;
     height: 0;
-    border-top: .5em solid #0059bc;
+    border-top: .5em solid #e72700;
     border-left: .5em solid transparent;
   }
 }
@@ -142,11 +145,12 @@
   cursor: pointer;
 
   .picker-action {
+    color: #161616;
     text-align: center;
     width: calc(100% / 3);
 
     &:hover {
-      background-color: #b1dcfb;
+      background-color: rgba(231, 39, 0, 0.5);
     }
 
     .text {

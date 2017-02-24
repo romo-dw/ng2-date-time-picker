@@ -1,28 +1,69 @@
 {
-  "name": "ng2-date-time-picker",
-  "version": "1.0.7",
-  "description": "Angular2 Date Time Picker. It is built with AngularJS 2 and is responsive to tablets and mobile devices",
-  "keywords": [
-    "Angular2",
-    "datepicker",
-    "date picker",
-    "timepicker",
-    "time picker"
+  "_args": [
+    [
+      {
+        "raw": "https://github.com/timbillstrom/ng2-date-time-picker",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "https://github.com/timbillstrom/ng2-date-time-picker",
+        "spec": "git+https://github.com/timbillstrom/ng2-date-time-picker.git",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:timbillstrom/ng2-date-time-picker.git",
+          "sshUrl": "git+ssh://git@github.com/timbillstrom/ng2-date-time-picker.git",
+          "httpsUrl": "git+https://github.com/timbillstrom/ng2-date-time-picker.git",
+          "gitUrl": "git://github.com/timbillstrom/ng2-date-time-picker.git",
+          "shortcut": "github:timbillstrom/ng2-date-time-picker",
+          "directUrl": "https://raw.githubusercontent.com/timbillstrom/ng2-date-time-picker/master/package.json"
+        }
+      },
+      "/mnt/c/Users/timbi/Documents/Realsprint/showify.me-2"
+    ]
   ],
-  "author": "Daniel Pan",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/DanielYKPan/ng2-date-time-picker.git"
+  "_from": "git+https://github.com/timbillstrom/ng2-date-time-picker.git",
+  "_id": "ng2-date-time-picker@1.0.7",
+  "_inCache": true,
+  "_location": "/ng2-date-time-picker",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "https://github.com/timbillstrom/ng2-date-time-picker",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "https://github.com/timbillstrom/ng2-date-time-picker",
+    "spec": "git+https://github.com/timbillstrom/ng2-date-time-picker.git",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:timbillstrom/ng2-date-time-picker.git",
+      "sshUrl": "git+ssh://git@github.com/timbillstrom/ng2-date-time-picker.git",
+      "httpsUrl": "git+https://github.com/timbillstrom/ng2-date-time-picker.git",
+      "gitUrl": "git://github.com/timbillstrom/ng2-date-time-picker.git",
+      "shortcut": "github:timbillstrom/ng2-date-time-picker",
+      "directUrl": "https://raw.githubusercontent.com/timbillstrom/ng2-date-time-picker/master/package.json"
+    }
   },
-  "scripts": {
-    "start": "webpack-dev-server --inline --progress --port 8080",
-    "test": "karma start",
-    "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail"
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/timbillstrom/ng2-date-time-picker.git#2ec53fe35eb1673c64792c538574707781a056f9",
+  "_shasum": "a71d877f157520e63d25ecba6e50c960a4779566",
+  "_shrinkwrap": null,
+  "_spec": "https://github.com/timbillstrom/ng2-date-time-picker",
+  "_where": "/mnt/c/Users/timbi/Documents/Realsprint/showify.me-2",
+  "author": {
+    "name": "Daniel Pan"
+  },
+  "bugs": {
+    "url": "https://github.com/DanielYKPan/ng2-date-time-picker/issues"
   },
   "dependencies": {
     "moment": "^2.17.0"
   },
+  "description": "Angular2 Date Time Picker. It is built with AngularJS 2 and is responsive to tablets and mobile devices",
   "devDependencies": {
     "@angular/common": "~2.4.0",
     "@angular/compiler": "~2.4.0",
@@ -78,5 +119,29 @@
     "webpack-dev-server": "^1.14.1",
     "webpack-merge": "^0.14.0",
     "zone.js": "^0.7.4"
-  }
+  },
+  "gitHead": "2ec53fe35eb1673c64792c538574707781a056f9",
+  "homepage": "https://github.com/DanielYKPan/ng2-date-time-picker#readme",
+  "keywords": [
+    "Angular2",
+    "datepicker",
+    "date picker",
+    "timepicker",
+    "time picker"
+  ],
+  "license": "MIT",
+  "name": "ng2-date-time-picker",
+  "optionalDependencies": {},
+  "readme": "\n# Angular 2 Date Time Picker\n\n**Angular 2 date time picker - Angular2 reusable UI component**\n\n## Description\nSimple Angular2 date time picker. Online demo is [here](https://danielykpan.github.io/ng2-date-time-picker/). This picker is responsive design, so feel free to try it in your desktops, tablets and mobile devices. This picker uses [MomentJS](http://momentjs.com/)\n\n## Installation\n\nTo install this component to an external project, follow the procedure:\n\n1. __npm install ng2-date-time-picker --save__\n2. Add __DateTimePickerModule__ import to your __@NgModule__ like example below\n    ```js\n    import { NgModule } from '@angular/core';\n    import { BrowserModule } from '@angular/platform-browser';\n    import { MyTestApp } from './my-test-app';\n\n    // If you are using webpack package loader import the MyDatePickerModule from here:\n    import { DateTimePickerModule } from 'ng2-date-time-picker';\n\n    // If you are using systemjs package loader import the MyDatePickerModule from here:\n    import { DateTimePickerModule } from 'ng2-date-time-picker/dist/date-time-picker.module';\n\n    @NgModule({\n        imports:      [ BrowserModule, DateTimePickerModule ],\n        declarations: [ MyTestApp ],\n        bootstrap:    [ MyTestApp ]\n    })\n    export class MyTestAppModule {}\n    ```\n3. This picker use MomentJS. Remember to load MomentJS when you load your project from webpack or systemjs\n4. If you are using __systemjs__ package loader add the following mydatepicker properties to the __System.config__:\n    ```js\n    (function (global) {\n        System.config({\n            paths: {\n                'npm:': 'node_modules/'\n            },\n            map: {\n                // Other components are here...\n\n                'ng2-date-time-picker': 'npm:ng2-date-time-picker',\n                'moment': 'npm:moment',\n            },\n            packages: {\n                // Other components are here...\n\n\t\t\t\t// the picker\n                'ng2-date-time-picker': {\n                    defaultExtension: 'js'\n                },\n                // momentJS\n                'moment': {\n\t                main: 'moment.js',\n\t                defaultExtension: 'js'\n\t            },\n            }\n        });\n    })(this);\n    ```\n\n## Usage\n\n### Date Picker\n\nUse the following snippet inside your template for example:\n\n```html\n\n<input [ngModel]=\"date\" (focus)=\"toggleDatePicker(true)\" readonly />\n<date-picker *ngIf=\"showDatePicker\" [initDate]=\"date\"\n           (onDatePickerCancel)=\"toggleDatePicker($event)\"\n           (onSelectDate)=\"setDate($event)\"></date-picker>\n```\nIn side your component\n```typescript\n            private date: any;\n            private showDatePicker: boolean;\n    \n            toggleDatePicker(status: boolean): void  {\n                this.showDatePicker = status;\n            }\n    \n            setDate(date: any): void {\n                this.date = date;\n            }\n```\n * Create a normal HTML Input and put it anywhere you want (like inside a form you already created). \n * Set the HTML Input to **readonly**, so you can only change the date value from the pop-up date picker.\n * Use **[ngModel]=\"date\"** from Angular2 built-in FormsModule to bind the date value to the input value. \n * Use **(focus)=\"toggleDatePicker(true)\"** to toggle the date picker. In the Code above, we set the showDatePicker variable to true in the component, so we date picker would show up.\n * The date-picker selector could be place anywhere inside your template. (Normally, put it outside your form tag).\n * Use ***ngIf=\"showDatePicker\"** in <date-picker></date-picker> to toggle the date picker. (**showDatePicker** is just variable from the component, you can change it to whatever you want)\n * Mandatory attributes:\n      * **[initDate]=\"date\"** --- The initial date you will have see in the calendar. You can set it null if you don't have any initial date, and the calendar would set Today as the initial date.\n      * **(onDatePickerCancel)=\"toggleDatePicker($event)\"** --- This would close the pop-up date picker when you click the cancel button or select a date in the date picker.\n      * **(onSelectDate)=\"setDate($event)\"** --- This would set the date value when you pick a date in the date picker.\n * Optional attributes:\n      * **[viewFormat]='ll'** --- You can change the date string format you will get when you pick a date. (Default value is 'll'. You can get more inform about the format from [MomentJS](http://momentjs.com/docs/#/parsing/string-format/)).\n      * **[locale]=\"'en'\"** --- This date-time-picker has robust support for internationalization. (Default value is 'en'. If you want to change to French for example, just set [locale]=\"'fr'\". You can get more inform about the i18n from [MomentJS-i18n](http://momentjs.com/docs/#/i18n/)).\n      * **[returnObject]=\"'js'\"** --- You can set the return object type when you pick a date from date-picker. (Default value is 'js', this means the default return object type is javascript Date object. The other options are: string, moment, json, array, iso and object).\n\n### Time Picker\nUse the following snippet inside your template for example:\n\n```html\n\n<input [ngModel]=\"time\" (focus)=\"toggleTimePicker(true)\" readonly />\n<time-picker *ngIf=\"showTimePicker\" [initTime]=\"time\"\n           (onTimePickerCancel)=\"toggleTimePicker($event)\"\n           (onSelectTime)=\"setTime($event)\"></time-picker>\n```\nIn side your component\n```typescript\n            private time: any;\n            private showTimePicker: boolean;\n    \n            toggleTimePicker(status: boolean): void  {\n                this.showTimePicker = status;\n            }\n    \n            setTime(time: any): void {\n                this.time = time;\n            }\n```\n* The usage of time picker is similar to date time picker except we use <time-picker></time-picker> selector.\n\n* Mandatory attributes:\n      * **[initTime]=\"time\"** --- The initial date you will have see in the calendar. You can set it null if you don't have any initial date, and the calendar would set Today as the initial date.\n      * **(onTimePickerCancel)=\"toggleTimePicker($event)\"** --- This would close the pop-up time picker when you click the cancel button or select a time in the time picker.\n      * **(onSelectTime)=\"setTime($event)\"** --- This would set the time value when you select a time in the time picker.\n\n\n* Optional attributes:\n      * **[viewFormat]=\"hh:mm A\"** --- You can change the time string format you will get when you select a time. (Default value is 'hh:mm A'. You can get more inform about the format from [MomentJS](http://momentjs.com/docs/#/parsing/string-format/)).\n      * **[use12Hour]=\"true\"** --- You can change the time format using 12 hour rule.(The default value is false, so we use 24 hour rule as default).\n      * **[showSecond]=\"true\"** --- You can show and change the second value in the time picker. (The default value is false, so the time picker does not show the second value as default).\n      * **[returnObject]=\"'js'\"** --- You can set the return object type when you pick a date from date-picker. (Default value is 'js', this means the default return object type is javascript Date object. The other options are: string, moment, json, array, iso and object).\n\n## Demo\nOnline demo is [here](https://danielykpan.github.io/ng2-date-time-picker/)\n\n## License\n* License: MIT\n\n## Author\n* Author: Daniel Pan\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielYKPan/ng2-date-time-picker.git"
+  },
+  "scripts": {
+    "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
+    "start": "webpack-dev-server --inline --progress --port 8080",
+    "test": "karma start"
+  },
+  "version": "1.0.7"
 }

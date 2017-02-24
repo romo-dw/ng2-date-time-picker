@@ -1,7 +1,7 @@
 <picker-modal (onOverlayClick)="cancelTimePicker()">
     <div class="picker-wrap">
         <div class="picker-box">
-            <div class="picker-header">Time Picker</div>
+            <div class="picker-header">Select time</div>
             <div class="picker-table">
                 <ul class="picker-table-time">
                     <li class="picker-table-number hour">
@@ -27,10 +27,7 @@
                 </ul>
             </div>
             <div class="picker-footer">
-                <div class="picker-action action-now" (click)="selectNow()"><span class="text">Now</span></div>
                 <div class="picker-action action-confirm" (click)="selectTime()"><span class="text">Confirm</span></div>
-                <div class="picker-action action-clear" (click)="clearTime()"><span class="text">Clear</span></div>
-                <div class="picker-action action-close" (click)="cancelTimePicker()"><span class="text">Close</span></div>
             </div>
         </div>
     </div>
