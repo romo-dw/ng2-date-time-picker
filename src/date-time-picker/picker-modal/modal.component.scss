@@ -19,7 +19,7 @@ $white: #fff;
   z-index: 99;
   width: 100%;
   height: 100%;
-  overflow-y: scroll;
+  overflow-y: hidden;
 }
 
 .picker-modal-overlay {
@@ -35,13 +35,12 @@ $white: #fff;
 
 .picker-modal-main {
   position: absolute;
-  top: 30px;
+  top: 35%;
   right: auto;
   bottom: auto;
   left: 50%;
   z-index: 111;
-  background-color: $white;
-  border: 1px solid darken($mid-grey, 10%);
+  background-color: #252525;
   border-radius: 6px;
   transform: translate(-50%, 0);
   box-shadow: 0 5px 15px $light-dark;

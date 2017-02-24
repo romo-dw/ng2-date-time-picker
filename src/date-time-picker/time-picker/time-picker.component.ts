@@ -42,7 +42,9 @@ export class TimePickerComponent implements OnInit {
             this.time = this.returnObject === 'string'? moment(this.initTime, this.viewFormat):
                 moment(this.initTime);
         } else {
-            this.time = moment();
+            const start = moment();
+            const remainder = 10 - start.minute() % 10;
+            this.time = moment(start).add(remainder, "minutes");
         }
     }
 
@@ -55,11 +57,11 @@ export class TimePickerComponent implements OnInit {
     }
 
     increaseMinute() {
-        this.time = this.time.clone().add(1, 'm');
+        this.time = this.time.clone().add(10, 'm');
     }
 
     decreaseMinute() {
-        this.time = this.time.clone().subtract(1, 'm');
+        this.time = this.time.clone().subtract(10, 'm');
     }
 
     increaseSecond(): void {

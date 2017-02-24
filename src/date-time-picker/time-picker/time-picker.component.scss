@@ -10,7 +10,7 @@
 
 .picker-wrap {
   width: 95vw;
-  max-width: 40rem;
+  max-width: 50rem;
   color: #161616;
 }
 
@@ -18,6 +18,7 @@
   width: 100%;
   padding: 0.625rem 1rem;
   user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .picker-header,
@@ -26,6 +27,7 @@
   line-height: 2.5rem;
   height: 2.5rem;
   width: 100%;
+  color: #ffffff;
 }
 
 .picker-header {
@@ -35,6 +37,8 @@
 .picker-table {
   width: 100%;
   margin: 2.5rem 0;
+  color: #fff;
+  padding-bottom: 15px;
 }
 
 .picker-table-time {
@@ -64,7 +68,7 @@
   position: absolute;
   left: 50%;
   border: solid #777;
-  border-width: 0 .2rem .2rem 0;
+  border-width: 0 .4rem .4rem 0;
   display: inline-block;
   padding: .25rem;
   cursor: pointer;
@@ -81,7 +85,7 @@
   }
 
   &:hover {
-    border-color: hsla(210, 79%, 46%, 1);
+    border-color: #e72700;
   }
 }
 
@@ -99,9 +103,10 @@
   .picker-action {
     width: 25%;
     text-align: center;
+    font-weight: 600;
 
     &:hover {
-      background-color: #b1dcfb;
+      background-color: #e72700;
     }
 
     .text {

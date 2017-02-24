@@ -1,7 +1,7 @@
 <picker-modal (onOverlayClick)="cancelTimePicker()">
     <div class="picker-wrap">
         <div class="picker-box">
-            <div class="picker-header">Select time</div>
+            <div class="picker-header"></div>
             <div class="picker-table">
                 <ul class="picker-table-time">
                     <li class="picker-table-number hour">
@@ -15,19 +15,13 @@
                         {{time | moment: 'mm'}}
                         <span class="arrow down" (click)="decreaseMinute()"></span>
                     </li>
-                    <li *ngIf="showSecond" class="picker-table-separator">:</li>
-                    <li *ngIf="showSecond" class="picker-table-number second">
-                        <span class="arrow up" (click)="increaseSecond()"></span>
-                        {{time | moment: 'ss'}}
-                        <span class="arrow down" (click)="decreaseSecond()"></span>
-                    </li>
                     <li *ngIf="use12Hour" class="picker-table-meridiem meridiem">
                         {{time | moment: 'A'}}
                     </li>
                 </ul>
             </div>
             <div class="picker-footer">
-                <div class="picker-action action-confirm" (click)="selectTime()"><span class="text">Confirm</span></div>
+                <div class="picker-action" (click)="selectTime()"><span class="text">Close</span></div>
             </div>
         </div>
     </div>
