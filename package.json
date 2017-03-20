@@ -143,5 +143,5 @@
     "start": "webpack-dev-server --inline --progress --port 8080",
     "test": "karma start"
   },
-  "version": "1.0.7"
+  "version": "1.1.0"
 }

@@ -26,6 +26,7 @@ export class TimePickerComponent implements OnInit {
     @Input() use12Hour: boolean = false;
     @Input() returnObject: string = 'js';
     @Output() onSelectTime = new EventEmitter<any>();
+    @Output() onTimePickerUpdate = new EventEmitter<any>();
     @Output() onTimePickerCancel = new EventEmitter<boolean>();
     hourFormat = 'HH';
     private time: Moment;
@@ -50,18 +51,22 @@ export class TimePickerComponent implements OnInit {
 
     increaseHour(): void {
         this.time = this.time.clone().add(1, 'h');
+        this.timePickerUpdate();
     }
 
     decreaseHour(): void {
         this.time = this.time.clone().subtract(1, 'h');
+        this.timePickerUpdate();
     }
 
     increaseMinute() {
         this.time = this.time.clone().add(10, 'm');
+        this.timePickerUpdate();
     }
 
     decreaseMinute() {
         this.time = this.time.clone().subtract(10, 'm');
+        this.timePickerUpdate();
     }
 
     increaseSecond(): void {
@@ -76,6 +81,12 @@ export class TimePickerComponent implements OnInit {
         let selectTime = this.parseToReturnObjectType(this.time);
         this.onSelectTime.emit(selectTime);
         this.cancelTimePicker();
+        return;
+    }
+
+    timePickerUpdate(): void {
+        let selectTime = this.parseToReturnObjectType(this.time);
+        this.onTimePickerUpdate.emit(selectTime);
         return;
     }
 
